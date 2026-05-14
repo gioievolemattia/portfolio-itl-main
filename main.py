@@ -53,9 +53,8 @@ def reg():
 
 
 
-if __name__ == "__main__":
-# Railway assegna una porta variabile, questo codice la intercetta
-    port = int(os.environ.get("PORT", 5000))
-    # '0.0.0.0' serve per rendere il sito visibile all'esterno
-    app.run(host='0.0.0.0', port=port)
 
+if __name__ == "__main__":
+    # Railway assegna la porta tramite os.environ.get
+    port = int(os.environ.get("PORT", 8080)) 
+    app.run(host='0.0.0.0', port=port)
